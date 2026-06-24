@@ -1,1 +1,483 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maxi Perfumes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a class="brand" href="#inicio" aria-label="Maxi Perfumes">
+        <img src="img/logo-maxi-perfumes.png" alt="Maxi Perfumes" />
+      </a>
+
+      <nav class="nav" aria-label="Navegacion principal">
+        <a href="#productos">Perfumes</a>
+        <a href="#ofertas">Ofertas</a>
+        <a href="#arabes">Arabes</a>
+        <a href="#loginCompra">Datos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <button
+        class="cart-btn"
+        id="abrirCarrito"
+        type="button"
+        aria-label="Abrir carrito"
+      >
+        <span>Carrito</span>
+        <strong id="contadorCarrito">0</strong>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-content">
+          <p class="eyebrow">Fragancias seleccionadas</p>
+          <h1>Maxi Perfumes</h1>
+          <p>
+            Perfumes para hombre, mujer y unisex con una experiencia de compra
+            simple, elegante y directa por WhatsApp.
+          </p>
+          <a href="#productos" class="btn-principal">Ver catalogo</a>
+        </div>
+      </section>
+
+      <section class="beneficios" aria-label="Beneficios">
+        <article class="beneficio">
+          <span>01</span>
+          <h3>Envios</h3>
+          <p>Coordinacion rapida para retirar o recibir tu pedido.</p>
+        </article>
+        <article class="beneficio">
+          <span>02</span>
+          <h3>Stock elegido</h3>
+          <p>
+            Fragancias seleccionadas para uso diario y ocasiones especiales.
+          </p>
+        </article>
+        <article class="beneficio">
+          <span>03</span>
+          <h3>Asesoria</h3>
+          <p>Te ayudamos a elegir segun estilo, intensidad y presupuesto.</p>
+        </article>
+      </section>
+
+      <section class="catalogo" id="productos">
+        <div class="section-heading">
+          <p class="eyebrow">Catalogo</p>
+          <h2>Perfumes destacados</h2>
+        </div>
+
+        <div class="toolbar" aria-label="Filtros del catalogo">
+          <label class="search-box" for="buscadorProductos">
+            <span>Buscar</span>
+            <input
+              id="buscadorProductos"
+              type="search"
+              placeholder="Nombre, nota o estilo"
+              autocomplete="off"
+            />
+          </label>
+
+          <div class="filtros" role="group" aria-label="Filtrar por genero">
+            <button class="filtro-btn activo" type="button" data-filtro="todos">
+              Todos
+            </button>
+            <button class="filtro-btn" type="button" data-filtro="hombre">
+              Hombre
+            </button>
+            <button class="filtro-btn" type="button" data-filtro="mujer">
+              Mujer
+            </button>
+            <button class="filtro-btn" type="button" data-filtro="unisex">
+              Unisex
+            </button>
+          </div>
+        </div>
+
+        <div class="grid-productos" id="contenedorProductos">
+          <article
+            class="card-producto"
+            data-categoria="hombre"
+            data-tags="maxi gold elegante amaderado noche hombre"
+          >
+            <span class="badge">Hombre</span>
+            <img src="img/maxi-gold.jpg" alt="Perfume Maxi Gold" />
+            <div class="producto-info">
+              <p class="categoria">Intenso amaderado</p>
+              <h3>Maxi Gold</h3>
+              <p class="descripcion">
+                Aroma elegante y sofisticado para destacar en reuniones y
+                salidas.
+              </p>
+              <div class="precio-row">
+                <p class="precio">$45.000</p>
+              </div>
+              <button
+                class="btn-agregar"
+                type="button"
+                data-nombre="Maxi Gold"
+                data-precio="45000"
+                data-imagen="img/maxi-gold.jpg"
+              >
+                Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="card-producto"
+            data-categoria="hombre"
+            data-tags="maxi noir intenso moderno noche hombre"
+          >
+            <span class="badge">Hombre</span>
+            <img src="img/maxi-noir.jpg" alt="Perfume Maxi Noir" />
+            <div class="producto-info">
+              <p class="categoria">Nocturno moderno</p>
+              <h3>Maxi Noir</h3>
+              <p class="descripcion">
+                Fragancia profunda, moderna y con mucha presencia.
+              </p>
+              <div class="precio-row">
+                <p class="precio">$52.000</p>
+              </div>
+              <button
+                class="btn-agregar"
+                type="button"
+                data-nombre="Maxi Noir"
+                data-precio="52000"
+                data-imagen="img/maxi-noir.jpg"
+              >
+                Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="card-producto"
+            data-categoria="unisex"
+            data-tags="maxi essence fresco refinado dia unisex"
+          >
+            <span class="badge">Unisex</span>
+            <img src="img/maxi-essence.jpg" alt="Perfume Maxi Essence" />
+            <div class="producto-info">
+              <p class="categoria">Fresco limpio</p>
+              <h3>Maxi Essence</h3>
+              <p class="descripcion">
+                Una combinacion fresca y refinada para todos los dias.
+              </p>
+              <div class="precio-row">
+                <p class="precio">$39.000</p>
+              </div>
+              <button
+                class="btn-agregar"
+                type="button"
+                data-nombre="Maxi Essence"
+                data-precio="39000"
+                data-imagen="img/maxi-essence.jpg"
+              >
+                Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="card-producto"
+            data-categoria="mujer"
+            data-tags="maxi prive calido premium mujer"
+          >
+            <span class="badge">Mujer</span>
+            <img src="img/maxi-prive.jpg" alt="Perfume Maxi Prive" />
+            <div class="producto-info">
+              <p class="categoria">Calido premium</p>
+              <h3>Maxi Prive</h3>
+              <p class="descripcion">
+                Perfume envolvente con notas calidas, dulces y exclusivas.
+              </p>
+              <div class="precio-row">
+                <p class="precio">$58.000</p>
+              </div>
+              <button
+                class="btn-agregar"
+                type="button"
+                data-nombre="Maxi Prive"
+                data-precio="58000"
+                data-imagen="img/maxi-prive.jpg"
+              >
+                Agregar al carrito
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <p class="sin-resultados" id="sinResultados">
+          No encontramos perfumes con ese filtro.
+        </p>
+      </section>
+
+      <section class="catalogo band" id="ofertas">
+        <div class="section-heading">
+          <p class="eyebrow">Promos activas</p>
+          <h2>Ofertas</h2>
+        </div>
+
+        <div class="grid-productos">
+          <article
+            class="card-producto oferta"
+            data-categoria="unisex"
+            data-tags="amber oud oferta arabe unisex ambar"
+          >
+            <span class="badge oferta-badge">Oferta</span>
+            <img src="img/amber-oud.jpg" alt="Perfume Amber Oud" />
+            <div class="producto-info">
+              <p class="categoria">Ambar y madera</p>
+              <h3>Amber Oud</h3>
+              <p class="descripcion">
+                Perfume arabe intenso, ideal para quienes buscan estela marcada.
+              </p>
+              <div class="precio-row">
+                <p class="precio">$49.000</p>
+                <p class="precio-anterior">$62.000</p>
+              </div>
+              <button
+                class="btn-agregar"
+                type="button"
+                data-nombre="Amber Oud"
+                data-precio="49000"
+                data-imagen="img/amber-oud.jpg"
+              >
+                Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="card-producto oferta"
+            data-categoria="mujer"
+            data-tags="desert rose oferta arabe mujer floral dulce"
+          >
+            <span class="badge oferta-badge">Oferta</span>
+            <img src="img/desert-rose.jpg" alt="Perfume Desert Rose" />
+            <div class="producto-info">
+              <p class="categoria">Floral dulce</p>
+              <h3>Desert Rose</h3>
+              <p class="descripcion">
+                Rosa, vainilla y un toque especiado con perfil femenino.
+              </p>
+              <div class="precio-row">
+                <p class="precio">$42.000</p>
+                <p class="precio-anterior">$51.000</p>
+              </div>
+              <button
+                class="btn-agregar"
+                type="button"
+                data-nombre="Desert Rose"
+                data-precio="42000"
+                data-imagen="img/desert-rose.jpg"
+              >
+                Agregar al carrito
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="catalogo" id="arabes">
+        <div class="section-heading">
+          <p class="eyebrow">Linea especial</p>
+          <h2>Perfumes arabes</h2>
+        </div>
+
+        <div class="grid-productos">
+          <article
+            class="card-producto"
+            data-categoria="unisex"
+            data-tags="arabian musk arabe musk limpio unisex"
+          >
+            <span class="badge">Unisex</span>
+            <img src="img/arabian-musk.jpg" alt="Perfume Arabian Musk" />
+            <div class="producto-info">
+              <p class="categoria">Musk limpio</p>
+              <h3>Arabian Musk</h3>
+              <p class="descripcion">
+                Salida limpia, cremosa y elegante con fondo almizclado.
+              </p>
+              <div class="precio-row">
+                <p class="precio">$46.000</p>
+              </div>
+              <button
+                class="btn-agregar"
+                type="button"
+                data-nombre="Arabian Musk"
+                data-precio="46000"
+                data-imagen="img/arabian-musk.jpg"
+              >
+                Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="card-producto"
+            data-categoria="hombre"
+            data-tags="royal saffron arabe hombre especiado azafran"
+          >
+            <span class="badge">Hombre</span>
+            <img src="img/royal-saffron.jpg" alt="Perfume Royal Saffron" />
+            <div class="producto-info">
+              <p class="categoria">Azafran especiado</p>
+              <h3>Royal Saffron</h3>
+              <p class="descripcion">
+                Una fragancia arabe especiada, seca y muy sofisticada.
+              </p>
+              <div class="precio-row">
+                <p class="precio">$55.000</p>
+              </div>
+              <button
+                class="btn-agregar"
+                type="button"
+                data-nombre="Royal Saffron"
+                data-precio="55000"
+                data-imagen="img/royal-saffron.jpg"
+              >
+                Agregar al carrito
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="nosotros" id="nosotros">
+        <div class="nosotros-texto">
+          <p class="eyebrow">Sobre la marca</p>
+          <h2>Fragancias con identidad</h2>
+          <p>
+            En Maxi Perfumes seleccionamos aromas con presencia, buen precio y
+            una compra directa. La idea es que encuentres rapido una fragancia
+            que encaje con tu estilo.
+          </p>
+        </div>
+      </section>
+
+      <section class="login-compra" id="loginCompra">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Datos obligatorios</p>
+            <h2>Datos para comprar</h2>
+          </div>
+          <p class="login-copy">
+            Completa tus datos una vez. Los usamos para armar el mensaje del
+            pedido.
+          </p>
+        </div>
+
+        <form class="login-form" id="formCliente">
+          <label>
+            Nombre
+            <input
+              id="clienteNombre"
+              name="nombre"
+              type="text"
+              autocomplete="given-name"
+              required
+            />
+          </label>
+          <label>
+            Apellido
+            <input
+              id="clienteApellido"
+              name="apellido"
+              type="text"
+              autocomplete="family-name"
+              required
+            />
+          </label>
+          <label>
+            DNI
+            <input
+              id="clienteDni"
+              name="dni"
+              type="text"
+              inputmode="numeric"
+              autocomplete="off"
+              minlength="7"
+              required
+            />
+          </label>
+          <label class="full">
+            Direccion
+            <input
+              id="clienteDireccion"
+              name="direccion"
+              type="text"
+              autocomplete="street-address"
+              required
+            />
+          </label>
+          <button class="btn-guardar-datos" type="submit">Guardar datos</button>
+          <p class="estado-login" id="estadoLogin">
+            Todavia falta completar tus datos para comprar.
+          </p>
+        </form>
+      </section>
+
+      <section class="contacto" id="contacto">
+        <p class="eyebrow">Atencion personalizada</p>
+        <h2>Consulta stock por WhatsApp</h2>
+        <p>Pasamos disponibilidad, recomendaciones y formas de entrega.</p>
+        <a
+          class="btn-whatsapp"
+          href="https://wa.me/5491138926286"
+          target="_blank"
+        >
+          Escribir por WhatsApp
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>2026 Maxi Perfumes. Todos los derechos reservados.</p>
+    </footer>
+
+    <aside class="carrito" id="carrito" aria-label="Carrito de compras">
+      <div class="carrito-header">
+        <div>
+          <p class="eyebrow">Pedido</p>
+          <h2>Tu carrito</h2>
+        </div>
+        <button
+          id="cerrarCarrito"
+          class="cerrar-carrito"
+          type="button"
+          aria-label="Cerrar carrito"
+        >
+          X
+        </button>
+      </div>
+
+      <div id="itemsCarrito" class="items-carrito">
+        <p class="carrito-vacio">Tu carrito esta vacio.</p>
+      </div>
+
+      <div class="carrito-footer">
+        <div class="total-row">
+          <span>Total</span>
+          <strong id="totalCarrito">$0</strong>
+        </div>
+        <button id="finalizarCompra" class="btn-comprar" type="button">
+          Finalizar por WhatsApp
+        </button>
+        <button id="vaciarCarrito" class="btn-vaciar" type="button">
+          Vaciar carrito
+        </button>
+      </div>
+    </aside>
+
+    <div class="overlay-carrito" id="overlayCarrito"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
 
